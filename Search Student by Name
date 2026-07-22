@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <string.h>
+
+struct Student
+{
+    int roll;
+    char name[30];
+};
+
+int main()
+{
+    struct Student s[3];
+    char search[30];
+    int i, found = 0;
+
+    for(i = 0; i < 3; i++)
+        scanf("%d %s", &s[i].roll, s[i].name);
+
+    printf("Enter Name to Search: ");
+    scanf("%s", search);
+
+    for(i = 0; i < 3; i++)
+    {
+        if(strcmp(search, s[i].name) == 0)
+        {
+            printf("Roll = %d", s[i].roll);
+            found = 1;
+        }
+    }
+
+    if(!found)
+        printf("Student Not Found");
+
+    return 0;
+}
+Sample Output
+Enter Name to Search:
+Priya
+
+Roll = 102
