@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+struct Student
+{
+    char name[30];
+    float marks;
+};
+
+int main()
+{
+    struct Student s[5];
+    int i, pass = 0;
+
+    for(i = 0; i < 5; i++)
+    {
+        printf("Enter Name and Marks: ");
+        scanf("%s %f", s[i].name, &s[i].marks);
+
+        if(s[i].marks >= 35)
+            pass++;
+    }
+
+    printf("Students Passed = %d", pass);
+
+    return 0;
+}
+Sample Output
+Students Passed = 4
