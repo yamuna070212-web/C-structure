@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+struct Student
+{
+    int roll;
+    char name[30];
+    float marks;
+};
+
+int main()
+{
+    struct Student s[5];
+    int i;
+
+    for(i = 0; i < 5; i++)
+    {
+        printf("Enter Roll Name Marks: ");
+        scanf("%d %s %f", &s[i].roll, s[i].name, &s[i].marks);
+    }
+
+    printf("\nStudent Details\n");
+
+    for(i = 0; i < 5; i++)
+    {
+        printf("%d\t%s\t%.2f\n", s[i].roll, s[i].name, s[i].marks);
+    }
+
+    return 0;
+}
+Sample Output
+Enter Roll Name Marks:
+101 Rahul 90
+102 Priya 88
+103 Kiran 76
+104 Anil 95
+105 Ravi 82
+
+Student Details
+101 Rahul 90.00
+102 Priya 88.00
+103 Kiran 76.00
+104 Anil 95.00
+105 Ravi 82.00
