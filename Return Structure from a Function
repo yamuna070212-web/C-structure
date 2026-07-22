@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+struct Student
+{
+    int roll;
+    char name[30];
+};
+
+struct Student getData()
+{
+    struct Student s;
+
+    printf("Enter Roll and Name: ");
+    scanf("%d %s", &s.roll, s.name);
+
+    return s;
+}
+
+int main()
+{
+    struct Student s;
+
+    s = getData();
+
+    printf("\nStudent Details\n");
+    printf("Roll: %d\n", s.roll);
+    printf("Name: %s\n", s.name);
+
+    return 0;
+}
+Sample Output
+Enter Roll and Name:
+105 Kiran
+
+Student Details
+Roll: 105
+Name: Kiran
