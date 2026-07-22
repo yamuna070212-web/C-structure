@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+struct Employee
+{
+    int id;
+    char name[30];
+    float salary;
+};
+
+int main()
+{
+    struct Employee e[3];
+    int i, max = 0;
+
+    for(i = 0; i < 3; i++)
+    {
+        printf("Enter ID Name Salary: ");
+        scanf("%d %s %f", &e[i].id, e[i].name, &e[i].salary);
+
+        if(e[i].salary > e[max].salary)
+            max = i;
+    }
+
+    printf("\nHighest Salary Employee\n");
+    printf("ID: %d\n", e[max].id);
+    printf("Name: %s\n", e[max].name);
+    printf("Salary: %.2f\n", e[max].salary);
+
+    return 0;
+}
+Sample Output
+Enter ID Name Salary:
+101 Ravi 30000
+102 Priya 50000
+103 Arun 40000
+
+Highest Salary Employee
+ID: 102
+Name: Priya
+Salary: 50000.00
