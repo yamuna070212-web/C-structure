@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+struct Student
+{
+    char name[30];
+    float marks;
+};
+
+int main()
+{
+    struct Student s[3];
+    int i;
+    float sum = 0;
+
+    for(i = 0; i < 3; i++)
+    {
+        printf("Enter Name and Marks: ");
+        scanf("%s %f", s[i].name, &s[i].marks);
+        sum += s[i].marks;
+    }
+
+    printf("Average Marks = %.2f", sum / 3);
+
+    return 0;
+}
+Sample Output
+Enter Name and Marks:
+Rahul 90
+Priya 80
+Anil 70
+
+Average Marks = 80.00
