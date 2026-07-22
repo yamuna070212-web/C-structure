@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Student
+{
+    int roll;
+    char name[30];
+};
+
+int main()
+{
+    struct Student *ptr;
+
+    ptr = (struct Student*)malloc(sizeof(struct Student));
+
+    printf("Enter Roll and Name: ");
+    scanf("%d %s", &ptr->roll, ptr->name);
+
+    printf("\nStudent Details\n");
+    printf("Roll: %d\n", ptr->roll);
+    printf("Name: %s\n", ptr->name);
+
+    free(ptr);
+
+    return 0;
+}
+Sample Output
+Enter Roll and Name:
+101 Rahul
+
+Student Details
+Roll: 101
+Name: Rahul
