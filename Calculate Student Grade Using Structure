@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+struct Student
+{
+    char name[30];
+    float marks;
+};
+
+int main()
+{
+    struct Student s;
+
+    printf("Enter Name: ");
+    scanf("%s", s.name);
+
+    printf("Enter Marks: ");
+    scanf("%f", &s.marks);
+
+    printf("\nName: %s\n", s.name);
+
+    if(s.marks >= 90)
+        printf("Grade: A");
+    else if(s.marks >= 75)
+        printf("Grade: B");
+    else if(s.marks >= 60)
+        printf("Grade: C");
+    else
+        printf("Grade: Fail");
+
+    return 0;
+}
+Sample Output
+Enter Name:
+Rahul
+
+Enter Marks:
+88
+
+Name: Rahul
+Grade: B
