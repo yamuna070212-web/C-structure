@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+struct Student
+{
+    int id;
+    float marks;
+};
+
+union Data
+{
+    int id;
+    float marks;
+};
+
+int main()
+{
+    printf("Size of Structure = %lu\n", sizeof(struct Student));
+    printf("Size of Union = %lu\n", sizeof(union Data));
+
+    return 0;
+}
+Sample Output
+Size of Structure = 8
+Size of Union = 4
