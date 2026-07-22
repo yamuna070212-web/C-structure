@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+struct Employee
+{
+    int id;
+    char name[30];
+};
+
+int main()
+{
+    struct Employee e[2];
+    int i;
+
+    for(i = 0; i < 2; i++)
+    {
+        printf("Enter ID and Name: ");
+        scanf("%d %s", &e[i].id, e[i].name);
+    }
+
+    printf("\nEmployee Details\n");
+
+    for(i = 0; i < 2; i++)
+    {
+        printf("%d %s\n", e[i].id, e[i].name);
+    }
+
+    return 0;
+}
+Sample Output
+Enter ID and Name:
+101 Rahul
+102 Priya
+
+Employee Details
+101 Rahul
+102 Priya
