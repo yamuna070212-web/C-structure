@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+struct Student
+{
+    char name[30];
+    int m1, m2, m3;
+};
+
+int main()
+{
+    struct Student s;
+    int total;
+    float percentage;
+
+    printf("Enter Name: ");
+    scanf("%s", s.name);
+
+    printf("Enter 3 Marks: ");
+    scanf("%d %d %d", &s.m1, &s.m2, &s.m3);
+
+    total = s.m1 + s.m2 + s.m3;
+    percentage = total / 3.0;
+
+    printf("\nName: %s\n", s.name);
+    printf("Total = %d\n", total);
+    printf("Percentage = %.2f%%", percentage);
+
+    return 0;
+}
+Sample Output
+Enter Name:
+Rahul
+
+Enter 3 Marks:
+90 85 95
+
+Name: Rahul
+Total = 270
+Percentage = 90.00%
