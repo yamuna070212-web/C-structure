@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+typedef struct
+{
+    int roll;
+    char name[30];
+} Student;
+
+int main()
+{
+    Student s;
+
+    printf("Enter Roll and Name: ");
+    scanf("%d %s", &s.roll, s.name);
+
+    printf("\nRoll: %d\n", s.roll);
+    printf("Name: %s\n", s.name);
+
+    return 0;
+}
+Sample Output
+Enter Roll and Name:
+102 Priya
+
+Roll: 102
+Name: Priya
